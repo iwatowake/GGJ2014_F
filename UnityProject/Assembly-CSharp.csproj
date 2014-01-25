@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Define\Define_Layer.cs" />
+     <Compile Include="Assets\Scripts\GameObject\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\GameObject\CubeParent.cs" />
      <Compile Include="Assets\Scripts\GameObject\Fade.cs" />
+     <Compile Include="Assets\Scripts\Stairs\StairsEndTrigger.cs" />
+     <Compile Include="Assets\Scripts\Stairs\StairsStartTrigger.cs" />
+     <Compile Include="Assets\Scripts\Stairs\StairsTrigger.cs" />
      <Compile Include="Assets\Scripts\State\StateBase.cs" />
      <Compile Include="Assets\Scripts\State\State_InGame.cs" />
      <Compile Include="Assets\Scripts\State\State_Title.cs" />
