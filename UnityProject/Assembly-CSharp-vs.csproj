@@ -49,22 +49,18 @@
      <Compile Include="Assets\Scripts\Define\Define_Layer.cs" />
      <Compile Include="Assets\Scripts\GameObject\CubeParent.cs" />
      <Compile Include="Assets\Scripts\GameObject\Fade.cs" />
+     <Compile Include="Assets\Scripts\GameObject\TextFade.cs" />
+     <Compile Include="Assets\Scripts\GameObject\UI_InGame.cs" />
      <Compile Include="Assets\Scripts\State\StateBase.cs" />
+     <Compile Include="Assets\Scripts\State\State_GameOver.cs" />
      <Compile Include="Assets\Scripts\State\State_InGame.cs" />
+     <Compile Include="Assets\Scripts\State\State_Result.cs" />
      <Compile Include="Assets\Scripts\State\State_Title.cs" />
      <Compile Include="Assets\iTween\Plugins\iTween.cs" />
-     <None Include="Assets\Resources\Textures\dummyfile.txt" />
-     <None Include="Assets\Prefabs\dummyfile.txt" />
      <None Include="Assets\Resources\Materials\dummyfile.txt" />
      <None Include="Assets\Plugins\dummyfile.txt" />
      <None Include="Assets\Resources\Prefabs\dummyfile.txt" />
-     <None Include="Assets\Work\Kojima\dummyfile.txt" />
-     <None Include="Assets\Work\Ideguchi\dummyfile.txt" />
      <None Include="Assets\Work\Victor\dummyfile.txt" />
-     <None Include="Assets\Scenes\dummyfile.txt" />
-     <None Include="Assets\Scripts\dummyfile.txt" />
-     <None Include="Assets\Textures\dummyfile.txt" />
-     <None Include="Assets\Materials\dummyfile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

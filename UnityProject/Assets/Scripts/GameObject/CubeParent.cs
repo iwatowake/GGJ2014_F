@@ -5,13 +5,15 @@ public class CubeParent : MonoBehaviour {
 
 	public			GameObject	goCharacter;
 
+	public			UI_InGame	uiIngame;
+
 	private const	float		ROTATETIME 		= 1.0f;
 	private			bool		isAnimating 	= false;
 
 	/// <summary>
 	/// Rotates the right.
 	/// </summary>
-	public	void	RotateRight(){
+	public	void	RotateLeft(){
 		if (isAnimating)
 			return;
 
@@ -28,13 +30,15 @@ public class CubeParent : MonoBehaviour {
 		iTween.RotateAdd (gameObject,ht);
 
 		isAnimating = true;
+
+		uiIngame.RightAllowEnable (false);
 	}
 
 
 	/// <summary>
 	/// Rotates the left.
 	/// </summary>
-	public	void	RotateLeft(){
+	public	void	RotateRight(){
 		if (isAnimating)
 			return;
 
@@ -50,6 +54,8 @@ public class CubeParent : MonoBehaviour {
 		iTween.RotateAdd (gameObject,ht);
 
 		isAnimating = true;
+
+		uiIngame.LeftAllowEnable (false);
 	}
 
 
@@ -60,6 +66,7 @@ public class CubeParent : MonoBehaviour {
 		isAnimating = false;
 		goCharacter.layer = (int)E_LAYER.Player;
 		goCharacter.GetComponent<Fade> ().FadeIn (0.25f);
+		uiIngame.AllowReset ();
 	}
 
 
