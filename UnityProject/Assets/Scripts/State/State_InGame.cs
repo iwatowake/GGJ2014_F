@@ -49,6 +49,7 @@ public class State_InGame : StateBase {
 			state++;
 			FadeIn();
 			ui_InGame.message.FadeIn(0.5f);
+			SoundManager.Instance.PlayBGM((int)BGM.stage);
 			break;
 		case STATE.Start_Exec:
 			break;
@@ -65,6 +66,8 @@ public class State_InGame : StateBase {
 			state++;
 			nextState = E_STATE.eStage1 + stageNumber;
 			ui_InGame.StageClear();
+			SoundManager.Instance.StopBGM();
+			SoundManager.Instance.PlaySE((int)SE.clear);
 			break;
 		case STATE.Clear_Exec:
 			if((waitTimer+=Time.deltaTime) > 3.0f)
@@ -104,6 +107,7 @@ public class State_InGame : StateBase {
 			ui_InGame.timeOver.FadeOut(1.0f);
 			break;
 		case STATE.Out_Exec:
+			SoundManager.Instance.StopBGM();
 			ChangeState(nextState);
 			break;
 		}
@@ -114,6 +118,7 @@ public class State_InGame : StateBase {
 		if (time > 0 && !isFading)
 		{
 			time-=Time.deltaTime;
+			MasterData.Instance.TotalTime += Time.deltaTime;
 			GUI_timeCounter.text = time.ToString("0");
 		}else{
 			state = STATE.Over_FadeIn_Init;

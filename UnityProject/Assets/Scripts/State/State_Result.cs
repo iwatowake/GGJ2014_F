@@ -18,7 +18,8 @@ public class State_Result : StateBase {
 		Out_Exec
 	}
 	
-	private	STATE	state = STATE.Start_Init;
+	private	STATE		state = STATE.Start_Init;
+	public	GUITexture	rate;
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,6 +27,8 @@ public class State_Result : StateBase {
 		{
 		case STATE.Start_Init:
 			FadeIn();
+
+			SoundManager.Instance.PlayBGM((int)BGM.result);
 			state++;
 			break;
 		case STATE.Start_Exec:
@@ -61,6 +64,5 @@ public class State_Result : StateBase {
 		base.OnCompleteFade ();
 		state++;
 	}
-
 
 }

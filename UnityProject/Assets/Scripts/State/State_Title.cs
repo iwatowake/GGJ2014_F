@@ -27,6 +27,8 @@ public class State_Title : StateBase {
 		{
 		case STATE.Start_Init:
 			FadeIn();
+			SoundManager.Instance.volume.BGM = 100;
+			SoundManager.Instance.PlayBGM((int)BGM.title);
 			state++;
 			break;
 		case STATE.Start_Exec:

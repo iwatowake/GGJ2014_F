@@ -28,7 +28,7 @@ public class itemscript : MonoBehaviour {
 		if(player.gameObject.tag  == "Player" ){
 			//gameObject.Find(objname).gameObject = sendtext;
 			GameObject.Find(objname).SendMessage(sendtext);		// Edit by iwatowake
-
+			SoundManager.Instance.PlaySE((int)SE.itemget);
 			gameObject.SetActiveRecursively(false);				
 			OnDisable();
 		}
