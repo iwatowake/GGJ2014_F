@@ -3,6 +3,10 @@ using System.Collections;
 
 public class TextFade : MonoBehaviour {
 
+	public	float	GetAlpha(){
+		return guiText.color.a;
+	}
+
 	public	void	FadeIn(float time){
 		Hashtable ht = new Hashtable ();
 		ht.Add ("time", time);

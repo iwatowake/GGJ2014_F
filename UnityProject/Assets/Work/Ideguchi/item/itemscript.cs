@@ -6,8 +6,8 @@ public class itemscript : MonoBehaviour {
 
 	public string objname;
 	public string sendtext;
-	public int key=0;
-	public int time=0;
+//	public int key	=	0;
+//	public int time	=	0;
 
 	// Use this for initialization
 	void Start () {
@@ -20,16 +20,16 @@ public class itemscript : MonoBehaviour {
 	}
 
 	void OnDisable(){
-
-		
+	
 	}
 
 	void OnTriggerEnter (Collider player){
 
 		if(player.gameObject.tag  == "Player" ){
 			//gameObject.Find(objname).gameObject = sendtext;
+			GameObject.Find(objname).SendMessage(sendtext);		// Edit by iwatowake
 
-			gameObject.SetActiveRecursively(false);
+			gameObject.SetActiveRecursively(false);				
 			OnDisable();
 		}
 	}

@@ -18,7 +18,9 @@ public class CubeParent : MonoBehaviour {
 			return;
 
 		goCharacter.layer = (int)E_LAYER.Invisible;
-		goCharacter.GetComponent<Fade> ().FadeOut (0.25f);
+		goCharacter.GetComponent<CharacterFade> ().FadeOut (0.15f);
+		goCharacter.GetComponent<CharacterMovement> ().isFreesed = true;
+		goCharacter.particleSystem.Play ();
 
 		Hashtable ht = new Hashtable ();
 
@@ -43,7 +45,9 @@ public class CubeParent : MonoBehaviour {
 			return;
 
 		goCharacter.layer = (int)E_LAYER.Invisible;
-		goCharacter.GetComponent<Fade> ().FadeOut (0.25f);
+		goCharacter.GetComponent<CharacterFade> ().FadeOut (0.15f);
+		goCharacter.GetComponent<CharacterMovement> ().isFreesed = true;
+		goCharacter.particleSystem.Play ();
 
 		Hashtable ht = new Hashtable ();
 		ht.Add ("name", "RotateLeft");
@@ -65,8 +69,10 @@ public class CubeParent : MonoBehaviour {
 	void	OnCompleteRotate(){
 		isAnimating = false;
 		goCharacter.layer = (int)E_LAYER.Player;
-		goCharacter.GetComponent<Fade> ().FadeIn (0.25f);
+		goCharacter.GetComponent<CharacterFade> ().FadeIn (0.15f);
+		goCharacter.particleSystem.Play ();
 		uiIngame.AllowReset ();
+		goCharacter.GetComponent<CharacterMovement> ().isFreesed = false;
 	}
 
 
@@ -74,8 +80,11 @@ public class CubeParent : MonoBehaviour {
 	/// ToDebug
 	/// </summary>
 	void Update(){
+		if (!goCharacter.GetComponent<CharacterMovement> ().isGruonded)
+						return;
+
 		if (Input.GetKeyDown (KeyCode.Z))
-						RotateLeft ();
+			RotateLeft ();
 
 		if (Input.GetKeyDown (KeyCode.X))
 			RotateRight ();

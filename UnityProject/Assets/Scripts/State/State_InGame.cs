@@ -14,8 +14,11 @@ public class State_InGame : StateBase {
 		Clear_Init,
 		Clear_Exec,
 		
-		Over_Init,
-		Over_Exec,
+		Over_FadeIn_Init,
+		Over_FadeIn_Exec,
+
+		Over_FadeOut_Init,
+		Over_FadeOut_Exec,
 		
 		Exit_Init,
 		Exit_Exec,
@@ -24,17 +27,25 @@ public class State_InGame : StateBase {
 		Out_Exec
 	}
 
-	public	int			stageNumber = 0;
-	private	float		time = 180;
-	private	STATE		state = STATE.Start_Init;
-	public	GUIText 	GUI_timeCounter;
-	private	E_STATE		nextState = E_STATE.eGameOver;
-	public	UI_InGame	ui_InGame;
+	public			int			stageNumber = 0;
+	private			float		time = 10;
+	private			STATE		state = STATE.Start_Init;
+	public			GUIText 	GUI_timeCounter;
+	private			E_STATE		nextState = E_STATE.eGameOver;
+	public			UI_InGame	ui_InGame;
+	private			bool		bHasKey = false;
+	private			float		waitTimer = 0;
+
+	private	const	float		TIME_REWINDVALUE = 30.0f;
+
+	public	bool	hasKey{
+		get{ return bHasKey;}
+	}
 
 	void Update(){
 		switch (state) 
 		{
-		case STATE.Start_Init:	// start
+		case STATE.Start_Init:			// start
 			state++;
 			FadeIn();
 			ui_InGame.message.FadeIn(0.5f);
@@ -42,7 +53,7 @@ public class State_InGame : StateBase {
 		case STATE.Start_Exec:
 			break;
 
-		case STATE.Main_Init:	// main
+		case STATE.Main_Init:			// main
 			state++;
 			ui_InGame.message.FadeOut(1.5f);
 			break;
@@ -50,32 +61,50 @@ public class State_InGame : StateBase {
 			Main_Exec();
 			break;
 
-		case STATE.Clear_Init:	// clear
+		case STATE.Clear_Init:			// clear
 			state++;
 			nextState = E_STATE.eStage1 + stageNumber;
+			ui_InGame.StageClear();
 			break;
 		case STATE.Clear_Exec:
+			if((waitTimer+=Time.deltaTime) > 3.0f)
+				state=STATE.Exit_Init;
 			break;
 
-		case STATE.Over_Init:	// over
+		case STATE.Over_FadeIn_Init:	// over
 			state++;
 			nextState = E_STATE.eGameOver;
+			ui_InGame.timeOver.FadeIn(1.0f);
+			GameObject.Find("Player").GetComponent<CharacterMovement>().isFreesed = true;
 			break;
-		case STATE.Over_Exec:
-
+		case STATE.Over_FadeIn_Exec:
+			if(ui_InGame.timeOver.GetAlpha() == 1.0f)
+				state++;
 			break;
 
-		case STATE.Exit_Init:	// exit
+		case STATE.Over_FadeOut_Init:	// over
+			state++;
+			nextState = E_STATE.eGameOver;
+			ui_InGame.timeOver.FadeOut(1.0f);
+			break;
+		case STATE.Over_FadeOut_Exec:
+			if(ui_InGame.timeOver.GetAlpha() == 0.0f)
+				state++;
+			break;
+
+		case STATE.Exit_Init:			// exit
 			FadeOut();
 			state++;
 			break;
 		case STATE.Exit_Exec:
 			break;
 
-		case STATE.Out_Init:	// out
+		case STATE.Out_Init:			// out
 			state++;
+			ui_InGame.timeOver.FadeOut(1.0f);
 			break;
 		case STATE.Out_Exec:
+			ChangeState(nextState);
 			break;
 		}
 
@@ -87,7 +116,7 @@ public class State_InGame : StateBase {
 			time-=Time.deltaTime;
 			GUI_timeCounter.text = time.ToString("0");
 		}else{
-			state = STATE.Over_Init;
+			state = STATE.Over_FadeIn_Init;
 		}
 	}
 
@@ -98,5 +127,14 @@ public class State_InGame : StateBase {
 
 	public	void	Goal(){
 		state = STATE.Clear_Init;
+	}
+
+	private	void	KeyGet(){
+		bHasKey = true;
+		ui_InGame.KeyEnable (true);
+	}
+
+	private	void	ClockGet(){
+		time += TIME_REWINDVALUE;
 	}
 }

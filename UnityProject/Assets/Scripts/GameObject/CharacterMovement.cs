@@ -33,6 +33,18 @@ public class CharacterMovement : MonoBehaviour
 	
 	private float stairsX = 0.0f;
 
+	private	bool freezed = false;
+
+	public	bool isFreesed{
+		get{return freezed;}
+		set{freezed = value;}
+	}
+
+	public	bool isGruonded{
+		get{return grounded;}
+		set{grounded = value;}
+	}
+
 	private void Start()
 	{
 		SwitchChara(0);
@@ -41,6 +53,9 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Update()
 	{
+		if (freezed)
+			return;
+
 		if (Input.GetKeyDown(KeyCode.L)) {
 			if (curChara == charaA)
 				SwitchChara (1);
@@ -97,7 +112,7 @@ public class CharacterMovement : MonoBehaviour
 	{
 		int mask = 1 << 8;	// Mask for raycast
 		if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z),
-		                    Vector3.down, colliderHeight + 0.1f, mask)) {
+		                    Vector3.down, colliderHeight/2 + 0.1f, mask)) {
 			grounded = true;
 			falling = false;
 		}
