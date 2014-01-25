@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\State\StateBase.cs" />
      <Compile Include="Assets\Scripts\State\State_InGame.cs" />
      <Compile Include="Assets\Scripts\State\State_Title.cs" />
-     <Compile Include="Assets\Work\Ideguchi\script\itemscript.cs" />
+     <Compile Include="Assets\Work\Ideguchi\item\itemscript.cs" />
      <Compile Include="Assets\iTween\Plugins\iTween.cs" />
      <None Include="Assets\Resources\Textures\dummyfile.txt" />
      <None Include="Assets\Prefabs\dummyfile.txt" />
