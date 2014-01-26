@@ -32,6 +32,7 @@ public class CharacterMovement : MonoBehaviour
 	private bool startOfStairs = false;
 	
 	private float stairsX = 0.0f;
+	private float stairsEnd = 0.0f;
 
 	private	bool freezed = false;
 
@@ -88,7 +89,7 @@ public class CharacterMovement : MonoBehaviour
 			else 
 				ChangeAnimation(Anim.move);
 		}
-		else if (grounded) {
+		else if (grounded || (!onStairs && endOfStairs)) {
 			if ((horizontalInput > 0 && !wallRight) || (horizontalInput < 0 && !wallLeft))
 				horizontalMovement = horizontalInput * speed * Time.deltaTime;
 			if (horizontalInput == 0)
@@ -96,7 +97,7 @@ public class CharacterMovement : MonoBehaviour
 			else
 				ChangeAnimation(Anim.move);
 		}
-		else if (falling && !climbing) {
+		else if (falling && !climbing  && !endOfStairs) {
 			verticalMovement = - gravity * Time.deltaTime;
 			ChangeAnimation(Anim.fall);
 		}
@@ -214,6 +215,7 @@ public class CharacterMovement : MonoBehaviour
 	public void EndOfStairsEnter(float y)
 	{
 		endOfStairs = true;
+		stairsEnd = y;
 	}
 
 	public void EndOfStairsExit(float y)
