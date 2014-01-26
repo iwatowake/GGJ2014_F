@@ -15,6 +15,7 @@ public class Goal : MonoBehaviour {
 			Instantiate(Resources.Load("Prefabs/Rocket_Ignition"),transform.position,Quaternion.identity);
 			other.GetComponent<CharacterMovement>().isFreesed = true;
 			other.gameObject.GetComponent<CharacterFade>().FadeOut(0.05f);
+			SoundManager.Instance.PlaySE((int)SE.rocket);
 		}
 	}
 	

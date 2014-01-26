@@ -78,6 +78,8 @@ public class State_InGame : StateBase {
 			state++;
 			nextState = E_STATE.eGameOver;
 			ui_InGame.timeOver.FadeIn(1.0f);
+			SoundManager.Instance.StopBGM();
+			SoundManager.Instance.PlaySE((int)SE.gameover);
 			GameObject.Find("Player").GetComponent<CharacterMovement>().isFreesed = true;
 			break;
 		case STATE.Over_FadeIn_Exec:
@@ -107,7 +109,6 @@ public class State_InGame : StateBase {
 			ui_InGame.timeOver.FadeOut(1.0f);
 			break;
 		case STATE.Out_Exec:
-			SoundManager.Instance.StopBGM();
 			ChangeState(nextState);
 			break;
 		}

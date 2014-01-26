@@ -14,5 +14,6 @@ public	enum SE
 	itemget,
 	clear,
 	gameover,
-	result
+	rakka,
+	rocket
 }

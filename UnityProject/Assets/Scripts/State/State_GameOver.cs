@@ -26,7 +26,7 @@ public class State_GameOver : StateBase {
 		{
 		case STATE.Start_Init:
 			FadeIn();
-			SoundManager.Instance.PlayBGM((int)BGM.gameover);
+//			SoundManager.Instance.PlayBGM((int)BGM.gameover);
 			state++;
 			break;
 		case STATE.Start_Exec:
@@ -53,7 +53,7 @@ public class State_GameOver : StateBase {
 			state++;
 			break;
 		case STATE.Out_Exec:
-			SoundManager.Instance.StopBGM();
+	//		SoundManager.Instance.StopBGM();
 			ChangeState(E_STATE.eTitle);
 			break;
 		}
