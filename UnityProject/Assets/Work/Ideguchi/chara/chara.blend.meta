@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eaed7900d33f2964ab8ef97637e9443e
+guid: 424cf8be47e19a246a7d076fa1cf7107
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -23,6 +23,14 @@ ModelImporter:
     400014: Plane_001
     400016: Plane_002
     400018: Plane_003
+    2300000: Plane
+    2300002: Plane_001
+    2300004: Plane_002
+    2300006: Plane_003
+    3300000: Plane
+    3300002: Plane_001
+    3300004: Plane_002
+    3300006: Plane_003
     4300000: Plane_001
     4300002: Plane_002
     4300004: Plane_003

@@ -47,8 +47,10 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Start()
 	{
+		charaA.wrapMode = WrapMode.Loop;
+		charaB.wrapMode = WrapMode.Loop;
 		SwitchChara(0);
-		curChara.wrapMode = WrapMode.Loop;
+		curChara.animation.Play("Idle");
 	}
 
 	private void Update()
@@ -83,7 +85,7 @@ public class CharacterMovement : MonoBehaviour
 			horizontalMovement = horizontalInput * speed * Time.deltaTime;
 			if (horizontalInput == 0)
 				ChangeAnimation(Anim.idle);
-			else
+			else 
 				ChangeAnimation(Anim.move);
 		}
 		else if (grounded) {
@@ -158,27 +160,27 @@ public class CharacterMovement : MonoBehaviour
 		switch (newAnim) {
 		case Anim.idle:
 			SwitchChara(0);
-			//curChara.wrapMode = WrapMode.Loop;
+			curChara.animation.Play("Idle");
 			break;
 		case Anim.move:
 			SwitchChara(0);
-			//curChara.wrapMode = WrapMode.Loop;
+			curChara.animation.Play("Move");
 			break;
 		case Anim.up:
 			SwitchChara(1);
-			//curChara.wrapMode = WrapMode.Loop;
+			curChara.animation.Play("Up");
 			break;
 		case Anim.down:
 			SwitchChara(1);
-			//curChara.wrapMode = WrapMode.Loop;
+			curChara.animation.Play("Up");
 			break;
 		case Anim.fall:
 			SwitchChara(0);
-			//curChara.wrapMode = WrapMode.ClampForever;
 			curChara.animation["Fall"].wrapMode = WrapMode.ClampForever;
 			curChara.animation.Play("Fall");
 			break;
 		}
+		curAnim = newAnim;
 	}
 
 	private void ChangeDirection(Direction newDir)
