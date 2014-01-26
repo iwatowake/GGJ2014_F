@@ -68,17 +68,17 @@ public class CharacterMovement : MonoBehaviour
 		float horizontalInput = Input.GetAxis("Horizontal");
 		float horizontalMovement = 0.0f;
 		float verticalMovement = 0.0f;
-		if ((onStairs || startOfStairs) && Input.GetKey(KeyCode.W)) {
+		if ((onStairs || startOfStairs) && Input.GetKey(KeyCode.UpArrow)) {
 			climbing = true;
 			verticalMovement = climbSpeed * Time.deltaTime;
-			if (transform.position.x != stairsX)
+			if (transform.position.x != stairsX && stairsX != 0.0f)
 				transform.position = new Vector3(stairsX, transform.position.y, transform.position.z);
 			ChangeAnimation(Anim.up);
 		}
-		else if ((onStairs || endOfStairs) && Input.GetKey(KeyCode.S) && !startOfStairs) {
+		else if ((onStairs || endOfStairs) && Input.GetKey(KeyCode.DownArrow) && !startOfStairs) {
 			climbing = true;
 			verticalMovement = - climbSpeed * Time.deltaTime;
-			if (transform.position.x != stairsX)
+			if (transform.position.x != stairsX && stairsX != 0.0f)
 				transform.position = new Vector3(stairsX, transform.position.y, transform.position.z);
 			ChangeAnimation(Anim.down);
 		}
@@ -208,6 +208,7 @@ public class CharacterMovement : MonoBehaviour
 
 	public void ExitStairs()
 	{
+		stairsX = 0;
 		onStairs = false;
 		climbing = false;
 	}

@@ -32,15 +32,19 @@ public class State_Title : StateBase {
 			state++;
 			break;
 		case STATE.Start_Exec:
+			if(Input.anyKeyDown)
+			{
+				state=STATE.Exit_Init;
+			}
 			break;
 			
 		case STATE.Main_Init:
 			state++;
 			break;
 		case STATE.Main_Exec:
-			if(Input.anyKeyDown && !isFading)
+			if(Input.anyKeyDown)
 			{
-				state++;
+				state=STATE.Exit_Init;
 			}
 			break;
 			

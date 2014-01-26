@@ -83,14 +83,14 @@ public class CubeParent : MonoBehaviour {
 		if (!goCharacter.GetComponent<CharacterMovement> ().isGruonded)
 						return;
 
-		if (Input.GetKeyDown (KeyCode.Z)) 
+		if (Input.GetKeyDown (KeyCode.X)) 
 		{
 			RotateLeft ();
 			MasterData.Instance.TotalRotation++;
 			SoundManager.Instance.PlaySE((int)SE.change_success);
 		}
 
-		if (Input.GetKeyDown (KeyCode.X)) 
+		if (Input.GetKeyDown (KeyCode.Z))
 		{
 			RotateRight ();
 			MasterData.Instance.TotalRotation++;
