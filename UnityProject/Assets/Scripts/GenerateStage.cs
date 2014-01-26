@@ -36,7 +36,7 @@ public class GenerateStage : MonoBehaviour {
 			{
 				Color pixel = map.GetPixel(j,i);
 				
-				if(pixel == Color.white)
+				if(pixel == Color.black)
 				{
 					GameObject go =	Instantiate(Resources.Load("Prefabs/Block"), new Vector3(-15.5f+j, -15.5f+i, 0.0f), Quaternion.identity) as GameObject;
 					go.transform.parent = line.transform;

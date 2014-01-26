@@ -2,15 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GenerateStage.cs">
     <Files>
-      <File FileName="Assets\Scripts\GenerateStage.cs" Line="44" Column="37" />
-      <File FileName="Assets\Scripts\Sound\SoundManager.cs" Line="48" Column="16" />
+      <File FileName="Assets\Scripts\State\State_InGame.cs" Line="31" Column="29" />
+      <File FileName="Assets\Scripts\GenerateStage.cs" Line="21" Column="3" />
+      <File FileName="Assets\Scripts\Sound\SoundManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MasterData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\State\State_InGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameObject\Goal.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameObject\CubeParent.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\State\State_Result.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameObject\SetRate.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameObject\CharacterMovement.cs" Line="97" Column="35" />
+      <File FileName="Assets\Scripts\GameObject\CharacterMovement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
