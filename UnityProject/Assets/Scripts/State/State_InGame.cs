@@ -28,7 +28,7 @@ public class State_InGame : StateBase {
 	}
 
 	public			int			stageNumber = 0;
-	private			float		time = 10;
+	private			float		time = 180;
 	private			STATE		state = STATE.Start_Init;
 	public			GUIText 	GUI_timeCounter;
 	private			E_STATE		nextState = E_STATE.eGameOver;
