@@ -47,11 +47,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Define\Define_Layer.cs" />
+     <Compile Include="Assets\Scripts\Define\Define_Sound.cs" />
+     <Compile Include="Assets\Scripts\GameObject\AutoRotation.cs" />
+     <Compile Include="Assets\Scripts\GameObject\CharacterFade.cs" />
      <Compile Include="Assets\Scripts\GameObject\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\GameObject\CubeParent.cs" />
+     <Compile Include="Assets\Scripts\GameObject\Door.cs" />
      <Compile Include="Assets\Scripts\GameObject\Fade.cs" />
+     <Compile Include="Assets\Scripts\GameObject\Goal.cs" />
+     <Compile Include="Assets\Scripts\GameObject\RespornCharacter.cs" />
+     <Compile Include="Assets\Scripts\GameObject\SetRate.cs" />
      <Compile Include="Assets\Scripts\GameObject\TextFade.cs" />
      <Compile Include="Assets\Scripts\GameObject\UI_InGame.cs" />
+     <Compile Include="Assets\Scripts\GenerateStage.cs" />
+     <Compile Include="Assets\Scripts\MasterData.cs" />
+     <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Stairs\StairsEndTrigger.cs" />
      <Compile Include="Assets\Scripts\Stairs\StairsStartTrigger.cs" />
      <Compile Include="Assets\Scripts\Stairs\StairsTrigger.cs" />
@@ -62,10 +72,84 @@
      <Compile Include="Assets\Scripts\State\State_Title.cs" />
      <Compile Include="Assets\Work\Ideguchi\item\itemscript.cs" />
      <Compile Include="Assets\iTween\Plugins\iTween.cs" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
      <None Include="Assets\Resources\Materials\dummyfile.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\RadialBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Plugins\dummyfile.txt" />
-     <None Include="Assets\Resources\Prefabs\dummyfile.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlurDX11.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\Work\Victor\dummyfile.txt" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlurClear.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{FDE690F1-626F-FFA0-5754-E83120972A79}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{5120E47E-05CF-77CB-C2BE-2B2453982161}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

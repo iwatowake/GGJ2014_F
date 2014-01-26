@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</ProjectGuid>
+	<ProjectGuid>{137A7369-EC96-0CC2-09B9-FE1D6DE1A3E3}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,32 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Define\Define_Layer.cs" />
-     <Compile Include="Assets\Scripts\Define\Define_Sound.cs" />
-     <Compile Include="Assets\Scripts\GameObject\AutoRotation.cs" />
-     <Compile Include="Assets\Scripts\GameObject\CharacterFade.cs" />
-     <Compile Include="Assets\Scripts\GameObject\CharacterMovement.cs" />
-     <Compile Include="Assets\Scripts\GameObject\CubeParent.cs" />
-     <Compile Include="Assets\Scripts\GameObject\Door.cs" />
-     <Compile Include="Assets\Scripts\GameObject\Fade.cs" />
-     <Compile Include="Assets\Scripts\GameObject\Goal.cs" />
-     <Compile Include="Assets\Scripts\GameObject\RespornCharacter.cs" />
-     <Compile Include="Assets\Scripts\GameObject\SetRate.cs" />
-     <Compile Include="Assets\Scripts\GameObject\TextFade.cs" />
-     <Compile Include="Assets\Scripts\GameObject\UI_InGame.cs" />
-     <Compile Include="Assets\Scripts\GenerateStage.cs" />
-     <Compile Include="Assets\Scripts\MasterData.cs" />
-     <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\Stairs\StairsEndTrigger.cs" />
-     <Compile Include="Assets\Scripts\Stairs\StairsStartTrigger.cs" />
-     <Compile Include="Assets\Scripts\Stairs\StairsTrigger.cs" />
-     <Compile Include="Assets\Scripts\State\StateBase.cs" />
-     <Compile Include="Assets\Scripts\State\State_GameOver.cs" />
-     <Compile Include="Assets\Scripts\State\State_InGame.cs" />
-     <Compile Include="Assets\Scripts\State\State_Result.cs" />
-     <Compile Include="Assets\Scripts\State\State_Title.cs" />
-     <Compile Include="Assets\Work\Ideguchi\item\itemscript.cs" />
-     <Compile Include="Assets\iTween\Plugins\iTween.cs" />
+     <Compile Include="Assets\KeyMove.js" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -87,6 +62,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
@@ -98,6 +74,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Resources\Prefabs\dummyfile.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
