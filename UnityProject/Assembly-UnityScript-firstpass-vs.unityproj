@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</ProjectGuid>
+	<ProjectGuid>{5120E47E-05CF-77CB-C2BE-2B2453982161}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript-firstpass</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,31 +46,32 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Define\Define_Layer.cs" />
-     <Compile Include="Assets\Scripts\Define\Define_Sound.cs" />
-     <Compile Include="Assets\Scripts\GameObject\AutoRotation.cs" />
-     <Compile Include="Assets\Scripts\GameObject\CharacterFade.cs" />
-     <Compile Include="Assets\Scripts\GameObject\CharacterMovement.cs" />
-     <Compile Include="Assets\Scripts\GameObject\CubeParent.cs" />
-     <Compile Include="Assets\Scripts\GameObject\Door.cs" />
-     <Compile Include="Assets\Scripts\GameObject\Fade.cs" />
-     <Compile Include="Assets\Scripts\GameObject\Goal.cs" />
-     <Compile Include="Assets\Scripts\GameObject\RespornCharacter.cs" />
-     <Compile Include="Assets\Scripts\GameObject\SetRate.cs" />
-     <Compile Include="Assets\Scripts\GameObject\TextFade.cs" />
-     <Compile Include="Assets\Scripts\GameObject\UI_InGame.cs" />
-     <Compile Include="Assets\Scripts\MasterData.cs" />
-     <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\Stairs\StairsEndTrigger.cs" />
-     <Compile Include="Assets\Scripts\Stairs\StairsStartTrigger.cs" />
-     <Compile Include="Assets\Scripts\Stairs\StairsTrigger.cs" />
-     <Compile Include="Assets\Scripts\State\StateBase.cs" />
-     <Compile Include="Assets\Scripts\State\State_GameOver.cs" />
-     <Compile Include="Assets\Scripts\State\State_InGame.cs" />
-     <Compile Include="Assets\Scripts\State\State_Result.cs" />
-     <Compile Include="Assets\Scripts\State\State_Title.cs" />
-     <Compile Include="Assets\Work\Ideguchi\item\itemscript.cs" />
-     <Compile Include="Assets\iTween\Plugins\iTween.cs" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\AmbientObscurance.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\AntialiasingAsPostEffect.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Bloom.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\BloomAndLensFlares.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Blur.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\CameraMotionBlur.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ColorCorrectionCurves.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ColorCorrectionLut.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ContrastEnhance.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Crease.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\DepthOfField34.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\DepthOfFieldScatter.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\EdgeDetectEffectNormals.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\FastBloom.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Fisheye.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\GlobalFog.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\NoiseAndGrain.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\PostEffectsBase.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\PostEffectsHelper.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Quads.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\ScreenOverlay.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\SunShafts.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\TiltShiftHdr.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Tonemapping.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Triangles.js" />
+     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\Vignetting.js" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -143,12 +144,6 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{FDE690F1-626F-FFA0-5754-E83120972A79}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{5120E47E-05CF-77CB-C2BE-2B2453982161}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
